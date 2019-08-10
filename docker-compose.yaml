@@ -1,7 +1,7 @@
 version: "3"
 services:
   app:
-    image: nightfuryest/angular-prod:latest
+    image: nightfuryest/angular-prod:ssr
     volumes:
       - app:/var/www
     networks:

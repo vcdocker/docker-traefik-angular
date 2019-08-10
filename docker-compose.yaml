@@ -11,7 +11,7 @@ services:
       - database
     deploy:
       labels:
-        - traefik.frontend.rule=Host:${APP_DOMAIN?Variable APP_DOMAIN not set}
+        - traefik.frontend.rule=Host:${APP_DOMAIN?Variable APP_DOMAIN not set},www.${APP_DOMAIN?Variable APP_DOMAIN not set}
         - traefik.enable=true
         - traefik.port=${PORT:-80}
         - traefik.tags=${TRAEFIK_PUBLIC_TAG:-traefik-public}
